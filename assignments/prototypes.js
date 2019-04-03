@@ -71,9 +71,21 @@ CharacterStats.prototype.takeDamage = function(){
 //   return `${this.newName} plays with ${this.newToy}`;
 // }
 
+function Hero(attr){
+ this.livesSaved = attr.livesSaved;
+ Humanoid.call(this,attr);
+}
+Hero.prototype = Object.create(Humanoid.prototype);
 
+Hero.prototype.save = function(){
+    
+}
 
-
+function Villian(attr){
+  this.livesKilled = attr.livesKilled;
+  Humanoid.call(this,attr);
+ }
+ Villian.prototype = Object.create(Humanoid.prototype);
 
 // Test you work by un-commenting these 3 objects and the list of console logs below:
 
